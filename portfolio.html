@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Kuriakose - AI & Data Science Student</title>
+    <meta name="description" content="Alex Kuriakose - Engineering Student specializing in Artificial Intelligence and Data Science. Exploring the intersection of technology and creativity.">
+    <meta name="author" content="Alex Kuriakose">
+    <meta name="keywords" content="Alex Kuriakose, AI, Data Science, Engineering, Student, Kerala, Innovation, Technology">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Alex Kuriakose - AI & Data Science Student">
+    <meta property="og:description" content="Engineering Student specializing in Artificial Intelligence and Data Science. Exploring the intersection of technology and creativity.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        :root {
+            /* Light theme colors */
+            --background: hsl(220, 25%, 97%);
+            --foreground: hsl(220, 20%, 15%);
+            --card: hsl(0, 0%, 100%);
+            --card-foreground: hsl(220, 20%, 15%);
+            --primary: hsl(220, 95%, 55%);
+            --primary-foreground: hsl(0, 0%, 100%);
+            --secondary: hsl(220, 15%, 95%);
+            --secondary-foreground: hsl(220, 20%, 15%);
+            --muted: hsl(220, 15%, 94%);
+            --muted-foreground: hsl(220, 10%, 45%);
+            --accent: hsl(199, 80%, 46%);
+            --accent-foreground: hsl(0, 0%, 100%);
+            --border: hsl(220, 15%, 90%);
+            --radius: 0.75rem;
+            
+            /* Custom gradients and effects */
+            --gradient-primary: linear-gradient(135deg, hsl(220, 95%, 55%) 0%, hsl(195, 60%, 53%) 100%);
+            --gradient-secondary: linear-gradient(180deg, hsl(220, 25%, 97%) 0%, hsl(220, 15%, 94%) 100%);
+            --shadow-elegant: 0 10px 30px -10px hsla(220, 95%, 55%, 0.2);
+            --shadow-glow: 0 0 40px hsla(280, 100%, 70%, 0.3);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Navigation Styles */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            transition: var(--transition-smooth);
+        }
+
+        .nav.scrolled {
+            background-color: hsla(220, 25%, 97%, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: var(--shadow-elegant);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+            padding: 0 1rem;
+        }
+
+        .nav-brand {
+            font-weight: 700;
+            font-size: 1.25rem;
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-menu {
+            display: none;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu.active {
+            display: flex;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: hsla(220, 25%, 97%, 0.95);
+            backdrop-filter: blur(12px);
+            flex-direction: column;
+            padding: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .nav-link {
+            color: var(--foreground);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .nav-menu {
+                display: flex;
+                position: static;
+                background: none;
+                flex-direction: row;
+                padding: 0;
+                border: none;
+            }
+            
+            .nav-toggle {
+                display: none;
+            }
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--primary-foreground);
+        }
+
+        .btn-primary:hover {
+            box-shadow: var(--shadow-glow);
+            transform: scale(1.05);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            transform: scale(1.05);
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.1);
+            transition: var(--transition-smooth);
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-elegant);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: var(--gradient-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .animate-slide-in-left {
+            animation: slideInLeft 0.6s ease-out;
+        }
+
+        .animate-slide-in-right {
+            animation: slideInRight 0.6s ease-out;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-bounce {
+            animation: bounce 2s infinite;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-bg {
+            background: var(--gradient-secondary);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: var(--muted-foreground);
+            max-width: 42rem;
+            margin: 0 auto 4rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: var(--gradient-secondary);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .hero-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(48px);
+        }
+
+        .hero-shape-1 {
+            top: 25%;
+            left: 25%;
+            width: 16rem;
+            height: 16rem;
+            background: hsla(220, 95%, 55%, 0.1);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero-shape-2 {
+            bottom: 25%;
+            right: 25%;
+            width: 24rem;
+            height: 24rem;
+            background: hsla(280, 100%, 70%, 0.1);
+            animation: float 3s ease-in-out infinite 1s;
+        }
+
+        .hero-shape-3 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20rem;
+            height: 20rem;
+            background: hsla(220, 95%, 55%, 0.05);
+            animation: float 3s ease-in-out infinite 2s;
+        }
+
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--muted-foreground);
+            margin-bottom: 2rem;
+            max-width: 48rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 4rem;
+            }
+            .hero-subtitle {
+                font-size: 2rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-title {
+                font-size: 5rem;
+            }
+            .hero-subtitle {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .grid-cols-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-cols-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-cols-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (min-width: 768px) {
+            .md\\:grid-cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .lg\\:grid-cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .lg\\:grid-cols-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .xl\\:grid-cols-4 {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* About Section */
+        .profile-image {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .profile-circle {
+            width: 20rem;
+            height: 20rem;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            padding: 4px;
+            position: relative;
+        }
+
+        .profile-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: var(--background);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .profile-placeholder {
+            width: 18rem;
+            height: 18rem;
+            border-radius: 50%;
+            background: var(--gradient-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .profile-glow-1 {
+            position: absolute;
+            top: -1rem;
+            right: -1rem;
+            width: 6rem;
+            height: 6rem;
+            background: hsla(280, 100%, 70%, 0.2);
+            border-radius: 50%;
+            filter: blur(24px);
+        }
+
+        .profile-glow-2 {
+            position: absolute;
+            bottom: -1rem;
+            left: -1rem;
+            width: 8rem;
+            height: 8rem;
+            background: hsla(220, 95%, 55%, 0.2);
+            border-radius: 50%;
+            filter: blur(24px);
+        }
+
+        /* Info Cards */
+        .info-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+        }
+
+        .info-icon {
+            padding: 0.75rem;
+            background: hsla(220, 95%, 55%, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 2rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--gradient-primary);
+        }
+
+        .timeline-item {
+            margin-left: 5rem;
+            position: relative;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -3rem;
+            top: 1.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            border: 4px solid var(--background);
+        }
+
+        /* Skills Grid */
+        .skill-card {
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .skill-icon {
+            padding: 0.75rem;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .skill-icon-primary {
+            background: hsla(220, 95%, 55%, 0.1);
+            color: var(--primary);
+        }
+
+        .skill-icon-accent {
+            background: hsla(280, 100%, 70%, 0.1);
+            color: var(--accent);
+        }
+
+        .skill-level {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--muted-foreground);
+            padding: 0.25rem 0.5rem;
+            background: var(--muted);
+            border-radius: 9999px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+            margin-top: 0.5rem;
+        }
+
+        .skill-tag {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            background: var(--muted);
+            color: var(--muted-foreground);
+            border-radius: 0.375rem;
+            transition: var(--transition-smooth);
+        }
+
+        .skill-tag:hover {
+            background: hsla(220, 95%, 55%, 0.1);
+            color: var(--primary);
+        }
+
+        /* Project Cards */
+        .project-status {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border: 1px solid;
+            border-radius: 9999px;
+            font-weight: 500;
+        }
+
+        .status-development {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .status-research {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .status-planned {
+            border-color: var(--muted-foreground);
+            color: var(--muted-foreground);
+        }
+
+        /* Contact Form */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--foreground);
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+            background: var(--background);
+            color: var(--foreground);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gradient-secondary);
+            border-top: 1px solid var(--border);
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--foreground);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .social-link:hover {
+            border-color: var(--primary);
+            background: hsla(220, 95%, 55%, 0.1);
+            color: var(--primary);
+        }
+
+        /* Responsive utilities */
+        .text-center {
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .md\\:hidden {
+                display: none;
+            }
+            
+            .md\\:block {
+                display: block;
+            }
+        }
+
+        /* Badge styles */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: 9999px;
+            background: var(--secondary);
+            color: var(--secondary-foreground);
+        }
+
+        .badge-primary {
+            background: hsla(220, 95%, 55%, 0.1);
+            color: var(--primary);
+        }
+
+        .toast {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            box-shadow: var(--shadow-elegant);
+            z-index: 100;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-out;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .toast-description {
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">Alex Kuriakose</div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link" onclick="scrollToSection('home')">Home</a></li>
+                    <li><a href="#about" class="nav-link" onclick="scrollToSection('about')">About</a></li>
+                    <li><a href="#experience" class="nav-link" onclick="scrollToSection('experience')">Experience</a></li>
+                    <li><a href="#skills" class="nav-link" onclick="scrollToSection('skills')">Skills</a></li>
+                    <li><a href="#projects" class="nav-link" onclick="scrollToSection('projects')">Projects</a></li>
+                    <li><a href="#contact" class="nav-link" onclick="scrollToSection('contact')">Contact</a></li>
+                </ul>
+                
+                <button class="nav-toggle" id="navToggle">
+                    <i data-lucide="menu" id="menuIcon"></i>
+                    <i data-lucide="x" id="closeIcon" class="hidden"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content animate-fade-in">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Alex Kuriakose</span>
+                </h1>
+                
+                <h2 class="hero-subtitle">
+                    Engineer in Making | AI & Data Science Enthusiast
+                </h2>
+                
+                <p class="hero-description">
+                    Exploring the Intersection of Technology and Creativity
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary btn-lg" onclick="scrollToSection('projects')">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-outline btn-lg" onclick="scrollToSection('contact')">
+                        <i data-lucide="mail"></i>
+                        Contact Me 
+                    </a>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator animate-bounce">
+                <i data-lucide="arrow-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 class="section-title">
+                    About <span class="gradient-text">Me</span>
+                </h2>
+                <p class="section-subtitle">
+                    Passionate about creating innovative solutions through technology
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2" style="align-items: center; gap: 3rem;">
+                <!-- Profile Image -->
+                <div class="profile-image animate-slide-in-left">
+                    <div class="profile-circle">
+                        <div class="profile-inner">
+                            <div class="profile-placeholder">AK</div>
+                        </div>
+                    </div>
+                    <div class="profile-glow-1"></div>
+                    <div class="profile-glow-2"></div>
+                </div>
+
+                <!-- Bio Content -->
+                <div class="animate-slide-in-right" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div>
+                        <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">Alex Kuriakose</h3>
+                        <p style="font-size: 1.125rem; color: var(--muted-foreground); margin-bottom: 1.5rem;">
+                            Engineering Student | Innovator in the Making | Exploring the Intersection of Technology and Creativity
+                        </p>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="card">
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i data-lucide="map-pin" style="color: var(--primary);"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-weight: 600; color: var(--foreground);">Location</h4>
+                                    <p style="color: var(--muted-foreground);">Alappuzha, Kerala, India</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i data-lucide="graduation-cap" style="color: var(--primary);"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-weight: 600; color: var(--foreground);">Education</h4>
+                                    <p style="color: var(--muted-foreground);">B.Tech in Artificial Intelligence and Data Science</p>
+                                    <p style="font-size: 0.875rem; color: var(--muted-foreground);">
+                                        St. Joseph's College of Engineering and Technology, Palai
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i data-lucide="calendar" style="color: var(--primary);"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-weight: 600; color: var(--foreground);">Duration</h4>
+                                    <p style="color: var(--muted-foreground);">2022 – Present</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-bg">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 class="section-title">
+                    Experience & <span class="gradient-text">Education</span>
+                </h2>
+                <p class="section-subtitle">
+                    My academic journey and learning path in technology
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line md:block hidden"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot md:block hidden"></div>
+                    <div class="card animate-fade-in">
+                        <div class="card-header" style="padding-bottom: 1rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <div>
+                                    <h3 class="card-title">Student</h3>
+                                    <h4 style="font-weight: 600; font-size: 1.125rem; color: var(--primary);">
+                                        St. Joseph's College of Engineering and Technology, Palai
+                                    </h4>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; flex-direction: column; gap: 1rem; color: var(--muted-foreground);">
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <i data-lucide="calendar" style="width: 1rem; height: 1rem;"></i>
+                                    <span style="font-size: 0.875rem;">Oct 2022 – Present</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <i data-lucide="map-pin" style="width: 1rem; height: 1rem;"></i>
+                                    <span style="font-size: 0.875rem;">Palai, Kerala</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-content" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <p style="color: var(--muted-foreground); line-height: 1.6;">
+                                Ongoing academic projects and learning focused on AI, data processing, and emerging technologies. 
+                                Active involvement in coursework covering machine learning algorithms, data structures, and software development practices.
+                            </p>
+                            
+                            <div>
+                                <h4 style="font-weight: 600; color: var(--foreground); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                                    <i data-lucide="book-open" style="width: 1rem; height: 1rem;"></i>
+                                    Key Focus Areas
+                                </h4>
+                                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                    <span class="badge badge-primary">Artificial Intelligence</span>
+                                    <span class="badge badge-primary">Data Science</span>
+                                    <span class="badge badge-primary">Machine Learning</span>
+                                    <span class="badge badge-primary">Python Programming</span>
+                                    <span class="badge badge-primary">Data Processing</span>
+                                    <span class="badge badge-primary">Academic Research</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 class="section-title">
+                    Skills & <span class="gradient-text">Expertise</span>
+                </h2>
+                <p class="section-subtitle">
+                    A comprehensive view of my technical and soft skills across various domains
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <!-- Engineering -->
+                <div class="card skill-card animate-fade-in">
+                    <div class="card-header" style="padding-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <div class="skill-icon skill-icon-primary">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <h3 style="font-size: 1.125rem; font-weight: 700;">Engineering</h3>
+                    </div>
+                    <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
+                            Core engineering principles and problem-solving methodologies
+                        </p>
+                        <div>
+                            <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.5rem;">Key Areas:</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">System Design</span>
+                                <span class="skill-tag">Problem Solving</span>
+                                <span class="skill-tag">Technical Analysis</span>
+                                <span class="skill-tag">Engineering Mathematics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artificial Intelligence -->
+                <div class="card skill-card animate-fade-in" style="animation-delay: 0.1s;">
+                    <div class="card-header" style="padding-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <div class="skill-icon skill-icon-accent">
+                                <i data-lucide="brain"></i>
+                            </div>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <h3 style="font-size: 1.125rem; font-weight: 700;">Artificial Intelligence</h3>
+                    </div>
+                    <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
+                            Machine learning algorithms and AI development
+                        </p>
+                        <div>
+                            <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.5rem;">Key Areas:</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Machine Learning</span>
+                                <span class="skill-tag">Neural Networks</span>
+                                <span class="skill-tag">Computer Vision</span>
+                                <span class="skill-tag">NLP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Science -->
+                <div class="card skill-card animate-fade-in" style="animation-delay: 0.2s;">
+                    <div class="card-header" style="padding-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <div class="skill-icon skill-icon-primary">
+                                <i data-lucide="database"></i>
+                            </div>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <h3 style="font-size: 1.125rem; font-weight: 700;">Data Science</h3>
+                    </div>
+                    <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
+                            Data processing, analysis, and visualization techniques
+                        </p>
+                        <div>
+                            <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.5rem;">Key Areas:</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Data Analysis</span>
+                                <span class="skill-tag">Statistics</span>
+                                <span class="skill-tag">Data Visualization</span>
+                                <span class="skill-tag">Python/R</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming -->
+                <div class="card skill-card animate-fade-in" style="animation-delay: 0.3s;">
+                    <div class="card-header" style="padding-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <div class="skill-icon skill-icon-accent">
+                                <i data-lucide="code"></i>
+                            </div>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                        <h3 style="font-size: 1.125rem; font-weight: 700;">Programming</h3>
+                    </div>
+                    <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
+                            Software development and coding expertise
+                        </p>
+                        <div>
+                            <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.5rem;">Key Areas:</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Data Structures</span>
+                                <span class="skill-tag">Algorithms</span>
+                                <span class="skill-tag">Software Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Innovation -->
+                <div class="card skill-card animate-fade-in" style="animation-delay: 0.4s;">
+                    <div class="card-header" style="padding-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <div class="skill-icon skill-icon-primary">
+                                <i data-lucide="lightbulb"></i>
+                            </div>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <h3 style="font-size: 1.125rem; font-weight: 700;">Innovation</h3>
+                    </div>
+                    <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
+                            Creative thinking and innovative solution development
+                        </p>
+                        <div>
+                            <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.5rem;">Key Areas:</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Creative Thinking</span>
+                                <span class="skill-tag">Research</span>
+                                <span class="skill-tag">Prototyping</span>
+                                <span class="skill-tag">Ideation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creativity -->
+                <div class="card skill-card animate-fade-in" style="animation-delay: 0.5s;">
+                    <div class="card-header" style="padding-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <div class="skill-icon skill-icon-accent">
+                                <i data-lucide="palette"></i>
+                            </div>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <h3 style="font-size: 1.125rem; font-weight: 700;">Creativity</h3>
+                    </div>
+                    <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
+                            Design thinking and creative problem-solving approaches
+                        </p>
+                        <div>
+                            <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.5rem;">Key Areas:</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Design Thinking</span>
+                                <span class="skill-tag">Creative Solutions</span>
+                                <span class="skill-tag">Visual Communication</span>
+                                <span class="skill-tag">Innovation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collaboration -->
+                <div class="card skill-card animate-fade-in" style="animation-delay: 0.6s;">
+                    <div class="card-header" style="padding-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <div class="skill-icon skill-icon-primary">
+                                <i data-lucide="users"></i>
+                            </div>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <h3 style="font-size: 1.125rem; font-weight: 700;">Collaboration</h3>
+                    </div>
+                    <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
+                            Teamwork and communication in technical environments
+                        </p>
+                        <div>
+                            <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.5rem;">Key Areas:</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Team Work</span>
+                                <span class="skill-tag">Communication</span>
+                                <span class="skill-tag">Leadership</span>
+                                <span class="skill-tag">Project Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adaptability -->
+                <div class="card skill-card animate-fade-in" style="animation-delay: 0.7s;">
+                    <div class="card-header" style="padding-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <div class="skill-icon skill-icon-accent">
+                                <i data-lucide="target"></i>
+                            </div>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <h3 style="font-size: 1.125rem; font-weight: 700;">Adaptability</h3>
+                    </div>
+                    <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
+                            Learning new technologies and adapting to change
+                        </p>
+                        <div>
+                            <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.5rem;">Key Areas:</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Quick Learning</span>
+                                <span class="skill-tag">Technology Adaptation</span>
+                                <span class="skill-tag">Flexibility</span>
+                                <span class="skill-tag">Growth Mindset</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-bg">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 class="section-title">
+                    Projects & <span class="gradient-text">Portfolio</span>
+                </h2>
+                <p class="section-subtitle">
+                    Upcoming and ongoing projects showcasing my skills in AI, Data Science, and Engineering
+                </p>
+            </div>
+
+            <!-- Current Status -->
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <div class="card" style="max-width: 42rem; margin: 0 auto; background: hsla(220, 95%, 55%, 0.05);">
+                    <div class="card-content" style="padding: 2rem; text-align: center;">
+                        <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
+                            <div class="skill-icon skill-icon-primary" style="padding: 0.75rem;">
+                                <i data-lucide="folder" style="width: 2rem; height: 2rem;"></i>
+                            </div>
+                        </div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">
+                            Building Amazing Projects
+                        </h3>
+                        <p style="color: var(--muted-foreground); margin-bottom: 1.5rem;">
+                            As a passionate student in AI and Data Science, I'm currently working on several exciting projects 
+                            that will demonstrate my growing expertise in these cutting-edge fields.
+                        </p>
+                        <span class="badge badge-primary">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3" style="margin-bottom: 3rem;">
+                <!-- Project 1 -->
+                <div class="card skill-card animate-fade-in">
+                    <div class="card-header" style="padding-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                            <div class="skill-icon skill-icon-primary">
+                                <i data-lucide="plus"></i>
+                            </div>
+                            <span class="project-status status-planned">Planned</span>
+                        </div>
+                        <h3 class="card-title" style="font-size: 1.25rem;">AI-Powered Data Analysis Tool</h3>
+                    </div>
+                    <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
+                            A comprehensive tool for automated data analysis using machine learning algorithms to extract insights from complex datasets.
+                        </p>
+                        <div>
+                            <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.5rem;">Technologies:</h4>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                <span class="badge">Python</span>
+                                <span class="badge">Pandas</span>
+                                <span class="badge">Scikit-learn</span>
+                                <span class="badge">Streamlit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card skill-card animate-fade-in" style="animation-delay: 0.2s;">
+                    <div class="card-header" style="padding-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                            <div class="skill-icon skill-icon-primary">
+                                <i data-lucide="plus"></i>
+                            </div>
+                            <span class="project-status status-development">In Development</span>
+                        </div>
+                        <h3 class="card-title" style="font-size: 1.25rem;">Smart Campus Management System</h3>
+                    </div>
+                    <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
+                            An intelligent system for campus resource management using IoT sensors and predictive analytics.
+                        </p>
+                        <div>
+                            <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.5rem;">Technologies:</h4>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                <span class="badge">React</span>
+                                <span class="badge">Node.js</span>
+                                <span class="badge">MongoDB</span>
+                                <span class="badge">IoT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="card skill-card animate-fade-in" style="animation-delay: 0.4s;">
+                    <div class="card-header" style="padding-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                            <div class="skill-icon skill-icon-primary">
+                                <i data-lucide="plus"></i>
+                            </div>
+                            <span class="project-status status-research">Research Phase</span>
+                        </div>
+                        <h3 class="card-title" style="font-size: 1.25rem;">Computer Vision Project</h3>
+                    </div>
+                    <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
+                            Image recognition and classification system for real-world applications using deep learning techniques.
+                        </p>
+                        <div>
+                            <h4 style="font-weight: 600; font-size: 0.875rem; margin-bottom: 0.5rem;">Technologies:</h4>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                <span class="badge">Python</span>
+                                <span class="badge">TensorFlow</span>
+                                <span class="badge">OpenCV</span>
+                                <span class="badge">CNN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center">
+                <p style="color: var(--muted-foreground); margin-bottom: 1.5rem;">
+                    Interested in collaborating or learning more about my upcoming projects?
+                </p>
+                <a href="#contact" class="btn btn-primary btn-lg" onclick="scrollToSection('contact')">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <h2 class="section-title">
+                    Get In <span class="gradient-text">Touch</span>
+                </h2>
+                <p class="section-subtitle">
+                    Let's collaborate on exciting projects or discuss opportunities in AI and Data Science
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2" style="gap: 3rem; max-width: 6xl; margin: 0 auto;">
+                <!-- Contact Information -->
+                <div class="animate-slide-in-left" style="display: flex; flex-direction: column; gap: 2rem;">
+                    <div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">
+                            Let's Connect
+                        </h3>
+                        <p style="color: var(--muted-foreground); margin-bottom: 2rem;">
+                            I'm always excited to discuss new opportunities, innovative projects, or simply connect 
+                            with fellow technology enthusiasts. Feel free to reach out!
+                        </p>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div class="card">
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i data-lucide="mail" style="color: var(--primary);"></i>
+                                </div>
+                                <div style="flex: 1;">
+                                    <h4 style="font-weight: 600; margin-bottom: 0.25rem;">Email</h4>
+                                    <a href="mailto:alexkuriakose46@gmail.com" 
+                                       style="color: var(--muted-foreground); text-decoration: none;"
+                                       onmouseover="this.style.color='var(--primary)'"
+                                       onmouseout="this.style.color='var(--muted-foreground)'">
+                                        alexkuriakose46@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i data-lucide="linkedin" style="color: var(--primary);"></i>
+                                </div>
+                                <div style="flex: 1;">
+                                    <h4 style="font-weight: 600; margin-bottom: 0.25rem;">LinkedIn</h4>
+                                    <a href="https://www.linkedin.com/in/alex-kuriakose-94ab04261" 
+                                       target="_blank" rel="noopener noreferrer"
+                                       style="color: var(--muted-foreground); text-decoration: none;"
+                                       onmouseover="this.style.color='var(--primary)'"
+                                       onmouseout="this.style.color='var(--muted-foreground)'">
+                                        alex-kuriakose-94ab04261
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i data-lucide="map-pin" style="color: var(--primary);"></i>
+                                </div>
+                                <div style="flex: 1;">
+                                    <h4 style="font-weight: 600; margin-bottom: 0.25rem;">Location</h4>
+                                    <p style="color: var(--muted-foreground); margin: 0;">
+                                        Alappuzha, Kerala, India
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="animate-slide-in-right">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Send a Message</h3>
+                        </div>
+                        <div class="card-content">
+                            <form id="contactForm" onsubmit="handleSubmit(event)">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" id="name" name="name" class="form-input" 
+                                           placeholder="Your full name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" id="email" name="email" class="form-input" 
+                                           placeholder="your.email@example.com" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea id="message" name="message" class="form-textarea" 
+                                              placeholder="Tell me about your project or idea..." 
+                                              rows="6" required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                                    <i data-lucide="send"></i>
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand -->
+                <div class="text-center">
+                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;" class="gradient-text">
+                        Alex Kuriakose
+                    </h3>
+                    <p style="color: var(--muted-foreground);">
+                        Engineer in Making | AI & Data Science Enthusiast
+                    </p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="social-links">
+                    <a href="mailto:alexkuriakose46@gmail.com" class="social-link" aria-label="Email">
+                        <i data-lucide="mail"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/alex-kuriakose-94ab04261" 
+                       target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <i data-lucide="github"></i>
+                    </a>
+                </div>
+
+                <!-- Back to Top -->
+                <button onclick="scrollToTop()" class="btn btn-outline">
+                    <i data-lucide="arrow-up"></i>
+                    Back to Top
+                </button>
+
+                <!-- Copyright -->
+                <div class="text-center" style="padding-top: 2rem; border-top: 1px solid var(--border); width: 100%;">
+                    <p style="font-size: 0.875rem; color: var(--muted-foreground);">
+                        © <span id="currentYear"></span> Alex Kuriakose. All rights reserved.
+                    </p>
+                    <p style="font-size: 0.75rem; color: var(--muted-foreground); margin-top: 0.5rem;">
+                        Built with passion for technology and innovation
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast">
+        <div class="toast-title">Message Sent!</div>
+        <div class="toast-description">Thank you for reaching out. I'll get back to you soon!</div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Navigation functionality
+        let isNavOpen = false;
+
+        const navbar = document.getElementById('navbar');
+        const navMenu = document.getElementById('navMenu');
+        const navToggle = document.getElementById('navToggle');
+        const menuIcon = document.getElementById('menuIcon');
+        const closeIcon = document.getElementById('closeIcon');
+
+        // Handle scroll effect on navbar
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Toggle mobile menu
+        navToggle.addEventListener('click', function() {
+            isNavOpen = !isNavOpen;
+            
+            if (isNavOpen) {
+                navMenu.classList.add('active');
+                menuIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                navMenu.classList.remove('active');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        });
+
+        // Smooth scrolling function
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                
+                // Close mobile menu if open
+                if (isNavOpen) {
+                    isNavOpen = false;
+                    navMenu.classList.remove('active');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            }
+        }
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Contact form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+
+            // Show toast notification
+            sh
