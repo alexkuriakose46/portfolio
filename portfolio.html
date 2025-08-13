@@ -30,8 +30,8 @@
             --card-foreground: hsl(220, 20%, 15%);
             --primary: hsl(200, 71%, 57%);
             --primary-foreground: hsl(0, 0%, 100%);
-            --secondary: hsl(220, 15%, 95%);
-            --secondary-foreground: hsl(220, 20%, 15%);
+            --secondary: hsl(210, 25%, 94%);
+            --secondary-foreground: hsl(220, 32%, 91%);
             --muted: hsl(220, 15%, 94%);
             --muted-foreground: hsl(220, 10%, 45%);
             --accent: hsl(221, 78%, 46%);
@@ -41,7 +41,7 @@
             
             /* Custom gradients and effects */
             --gradient-primary: linear-gradient(135deg, hsl(220, 95%, 55%) 0%, hsl(206, 70%, 58%) 100%);
-            --gradient-secondary: linear-gradient(180deg, hsl(220, 25%, 97%) 0%, hsl(220, 15%, 94%) 100%);
+            --gradient-secondary: linear-gradient(180deg, hsl(206, 80%, 4%) 0%, hsl(212, 62%, 4%) 100%);
             --shadow-elegant: 0 10px 30px -10px hsla(220, 95%, 55%, 0.2);
             --shadow-glow: 0 0 40px hsla(280, 100%, 70%, 0.3);
             --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -65,6 +65,7 @@
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 1rem;
+            
         }
 
         /* Navigation Styles */
@@ -75,6 +76,8 @@
             right: 0;
             z-index: 50;
             transition: var(--transition-smooth);
+            background: #000 !important;
+            
         }
 
         .nav.scrolled {
@@ -82,6 +85,7 @@
             backdrop-filter: blur(12px);
             box-shadow: var(--shadow-elegant);
             border-bottom: 1px solid var(--border);
+
         }
 
         .nav-content {
@@ -90,6 +94,8 @@
             align-items: center;
             height: 4rem;
             padding: 0 1rem;
+            background: #000;
+           
         }
 
         .nav-brand {
@@ -99,12 +105,15 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            
+            
         }
 
         .nav-menu {
             display: none;
             list-style: none;
             gap: 2rem;
+            background: #000;
         }
 
         .nav-menu.active {
@@ -113,11 +122,12 @@
             top: 100%;
             left: 0;
             right: 0;
-            background-color: hsla(220, 25%, 97%, 0.95);
+            background-color: hsla(0, 11%, 93%, 0.95);
             backdrop-filter: blur(12px);
             flex-direction: column;
             padding: 1rem;
             border-top: 1px solid var(--border);
+            background: #000;
         }
 
         .nav-link {
@@ -126,6 +136,7 @@
             font-weight: 500;
             transition: color 0.2s;
             cursor: pointer;
+            color: aliceblue;
         }
 
         .nav-link:hover {
@@ -144,10 +155,11 @@
             .nav-menu {
                 display: flex;
                 position: static;
-                background: none;
+                background:none ;
                 flex-direction: row;
                 padding: 0;
                 border: none;
+
             }
             
             .nav-toggle {
@@ -203,8 +215,10 @@
             background: var(--card);
             border: 1px solid var(--border);
             border-radius: var(--radius);
-            box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.1);
+            box-shadow: 0 1px 3px hsla(0, 6%, 90%, 0.1);
             transition: var(--transition-smooth);
+            background: #000;
+            
         }
 
         .card:hover {
@@ -318,6 +332,7 @@
 
         .section-bg {
             background: var(--gradient-secondary);
+           
         }
 
         .section-title {
@@ -402,6 +417,7 @@
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1rem;
+            color: rgb(168, 167, 189);
         }
 
         .hero-description {
@@ -426,6 +442,7 @@
             bottom: 2rem;
             left: 50%;
             transform: translateX(-50%);
+            color: aliceblue;
         }
 
         @media (min-width: 640px) {
@@ -564,6 +581,8 @@
             align-items: center;
             gap: 1rem;
             padding: 1.5rem;
+            background: #000;
+           
         }
 
         .info-icon {
@@ -743,6 +762,7 @@
         .social-links {
             display: flex;
             gap: 1rem;
+            
         }
 
         .social-link {
@@ -756,6 +776,8 @@
             color: var(--foreground);
             text-decoration: none;
             transition: var(--transition-smooth);
+            color: rgb(168, 167, 189);
+            border-color: rgb(168, 167, 189);
         }
 
         .social-link:hover {
@@ -909,8 +931,8 @@
     <section id="about" class="section">
         <div class="container">
             <div class="text-center" style="margin-bottom: 4rem;">
-                <h2 class="section-title">
-                    About <span class="gradient-text">Me</span>
+                <h2 class="section-title" style="color: rgb(26, 109, 225);">
+                    About <span class="section-title">Me</span>
                 </h2>
                 <p class="section-subtitle">
                     Passionate about creating innovative solutions through technology
@@ -932,7 +954,7 @@
                 <!-- Bio Content -->
                 <div class="animate-slide-in-right" style="display: flex; flex-direction: column; gap: 1.5rem;">
                     <div>
-                        <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">Alex Kuriakose</h3>
+                        <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: rgb(26, 109, 225);" >Alex Kuriakose</h3>
                         <p style="font-size: 1.125rem; color: var(--muted-foreground); margin-bottom: 1.5rem;">
                             Engineering Student | Innovator in the Making | Exploring the Intersection of Technology and Creativity
                         </p>
@@ -945,7 +967,7 @@
                                     <i data-lucide="map-pin" style="color: var(--primary);"></i>
                                 </div>
                                 <div>
-                                    <h4 style="font-weight: 600; color: var(--foreground);">Location</h4>
+                                    <h4 style="font-weight: 600; color: var(--foreground); color: rgb(235, 241, 249);">Location</h4>
                                     <p style="color: var(--muted-foreground);">Alappuzha, Kerala, India</p>
                                 </div>
                             </div>
@@ -957,7 +979,7 @@
                                     <i data-lucide="graduation-cap" style="color: var(--primary);"></i>
                                 </div>
                                 <div>
-                                    <h4 style="font-weight: 600; color: var(--foreground);">Education</h4>
+                                    <h4 style="font-weight: 600; color: var(--foreground);color: rgb(235, 241, 249);">Education</h4>
                                     <p style="color: var(--muted-foreground);">B.Tech in Artificial Intelligence and Data Science</p>
                                     <p style="font-size: 0.875rem; color: var(--muted-foreground);">
                                         St. Joseph's College of Engineering and Technology, Palai
@@ -972,7 +994,7 @@
                                     <i data-lucide="calendar" style="color: var(--primary);"></i>
                                 </div>
                                 <div>
-                                    <h4 style="font-weight: 600; color: var(--foreground);">Duration</h4>
+                                    <h4 style="font-weight: 600; color: var(--foreground);color: rgb(235, 241, 249);">Duration</h4>
                                     <p style="color: var(--muted-foreground);">2022 – Present</p>
                                 </div>
                             </div>
@@ -984,10 +1006,10 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="section section-bg">
+    <section id="experience" class="section section-bg" >
         <div class="container">
             <div class="text-center" style="margin-bottom: 4rem;">
-                <h2 class="section-title">
+                <h2 class="section-title" style="color: rgb(26, 109, 225);">
                     Experience & <span class="gradient-text">Education</span>
                 </h2>
                 <p class="section-subtitle">
@@ -1002,11 +1024,11 @@
                     <div class="timeline-dot md:block hidden"></div>
                     <div class="card animate-fade-in">
                         <div class="card-header" style="padding-bottom: 1rem;">
-                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;color: rgb(235, 241, 249);">
                                 <div>
                                     <h3 class="card-title">Student</h3>
                                     <h4 style="font-weight: 600; font-size: 1.125rem; color: var(--primary);">
-                                       <a href="https://sjcetpalai.ac.in/" style="text-decoration: none;"  class="link" > St. Joseph's College of Engineering and Technology, Palai</a>
+                                       <a href="https://sjcetpalai.ac.in/" style="text-decoration: none; color: rgb(58, 159, 214);"  class="link" > St. Joseph's College of Engineering and Technology, Palai</a>
                                     </h4>
                                 </div>
                             </div>
@@ -1028,8 +1050,8 @@
                                 A dedicated and well-organized student with a solid academic background, skilled in managing and calculating financial tasks, experienced in implementing mechanical projects, and proficient in handling both mechanical and technical operations </p>
                             
                             <div>
-                                <h4 style="font-weight: 600; color: var(--foreground); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-                                    <i data-lucide="book-open" style="width: 1rem; height: 1rem;"></i>
+                                <h4 style="font-weight: 600; color: var(--foreground); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;color: rgb(146, 144, 141);">
+                                    <i data-lucide="book-open" style="width: 1rem; height: 1rem; color: rgb(146, 144, 141);"></i>
                                     Key Focus Areas
                                 </h4>
                                 <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
@@ -1052,7 +1074,7 @@
     <section id="skills" class="section">
         <div class="container">
             <div class="text-center" style="margin-bottom: 4rem;">
-                <h2 class="section-title">
+                <h2 class="section-title" style="color: rgb(26, 109, 225);">
                     Skills & <span class="gradient-text">Expertise</span>
                 </h2>
                 <p class="section-subtitle">
@@ -1070,7 +1092,7 @@
                             </div>
                             <span class="skill-level">Advanced</span>
                         </div>
-                        <h3 style="font-size: 1.125rem; font-weight: 700;">Engineering</h3>
+                        <h3 style="font-size: 1.125rem; font-weight: 700;color: aliceblue;font-size:xx-large;">Engineering</h3>
                     </div>
                     <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
                         <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
@@ -1100,7 +1122,7 @@
                             </div>
                             <span class="skill-level">Intermediate</span>
                         </div>
-                        <h3 style="font-size: 1.125rem; font-weight: 700;">Programming</h3>
+                        <h3 style="font-size: 1.125rem; font-weight: 700;color: aliceblue;font-size:xx-large;">Programming</h3>
                     </div>
                     <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
                         <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
@@ -1127,7 +1149,7 @@
                             </div>
                             <span class="skill-level">Advanced</span>
                         </div>
-                        <h3 style="font-size: 1.125rem; font-weight: 700;">Innovation</h3>
+                        <h3 style="font-size: 1.125rem; font-weight: 700;color: aliceblue;font-size:xx-large;">Innovation</h3>
                     </div>
                     <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
                         <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
@@ -1154,7 +1176,7 @@
                             </div>
                             <span class="skill-level">Advanced</span>
                         </div>
-                        <h3 style="font-size: 1.125rem; font-weight: 700;">Creativity</h3>
+                        <h3 style="font-size: 1.125rem; font-weight: 700;color: aliceblue;font-size:xx-large;">Creativity</h3>
                     </div>
                     <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
                         <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
@@ -1181,7 +1203,7 @@
                             </div>
                             <span class="skill-level">Advanced</span>
                         </div>
-                        <h3 style="font-size: 1.125rem; font-weight: 700;">Collaboration</h3>
+                        <h3 style="font-size: 1.125rem; font-weight: 700;color: aliceblue;font-size:xx-large;">Collaboration</h3>
                     </div>
                     <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
                         <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
@@ -1208,7 +1230,7 @@
                             </div>
                             <span class="skill-level">Advanced</span>
                         </div>
-                        <h3 style="font-size: 1.125rem; font-weight: 700;">Adaptability</h3>
+                        <h3 style="font-size: 1.125rem; font-weight: 700;color: aliceblue;font-size:xx-large;">Adaptability</h3>
                     </div>
                     <div class="card-content" style="display: flex; flex-direction: column; gap: 1rem;">
                         <p style="font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.6;">
@@ -1233,7 +1255,7 @@
     <section id="projects" class="section section-bg">
         <div class="container">
             <div class="text-center" style="margin-bottom: 4rem;">
-                <h2 class="section-title">
+                <h2 class="section-title"style="color: rgb(26, 109, 225);">
                     Projects & <span class="gradient-text">Portfolio</span>
                 </h2>
                 <p class="section-subtitle">
@@ -1250,7 +1272,7 @@
                                 <i data-lucide="folder" style="width: 2rem; height: 2rem;"></i>
                             </div>
                         </div>
-                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;color: rgb(58, 159, 214);">
                             Building Amazing Projects
                         </h3>
                         <p style="color: var(--muted-foreground); margin-bottom: 1.5rem;">
@@ -1362,7 +1384,7 @@
     <section id="contact" class="section">
         <div class="container">
             <div class="text-center" style="margin-bottom: 4rem;">
-                <h2 class="section-title">
+                <h2 class="section-title"style="color: rgb(26, 109, 225);">
                     Get In <span class="gradient-text">Touch</span>
                 </h2>
                 <p class="section-subtitle">
@@ -1374,7 +1396,7 @@
                 <!-- Contact Information -->
                 <div class="animate-slide-in-left" style="display: flex; flex-direction: column; gap: 2rem;">
                     <div>
-                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;color: rgb(220, 227, 230);">
                             Let's Connect
                         </h3>
                         <p style="color: var(--muted-foreground); margin-bottom: 2rem;">
@@ -1390,7 +1412,7 @@
                                     <i data-lucide="mail" style="color: var(--primary);"></i>
                                 </div>
                                 <div style="flex: 1;">
-                                    <h4 style="font-weight: 600; margin-bottom: 0.25rem;">Email</h4>
+                                    <h4 style="font-weight: 600; margin-bottom: 0.25rem;color: rgb(58, 159, 214);">Email</h4>
                                     <a href="mailto:alexkuriakose46@gmail.com" 
                                        style="color: var(--muted-foreground); text-decoration: none;"
                                        onmouseover="this.style.color='var(--primary)'"
@@ -1407,7 +1429,7 @@
                                     <i data-lucide="linkedin" style="color: var(--primary);"></i>
                                 </div>
                                 <div style="flex: 1;">
-                                    <h4 style="font-weight: 600; margin-bottom: 0.25rem;">LinkedIn</h4>
+                                    <h4 style="font-weight: 600; margin-bottom: 0.25rem;color: rgb(58, 159, 214);">LinkedIn</h4>
                                     <a href="https://www.linkedin.com/in/alex-kuriakose-94ab04261?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
                                        target="_blank" rel="noopener noreferrer"
                                        style="color: var(--muted-foreground); text-decoration: none;"
@@ -1425,7 +1447,7 @@
                                     <i data-lucide="Phone" style="color: var(--primary);"></i>
                                 </div>
                                 <div style="flex: 1;">
-                                    <h4 style="font-weight: 600; margin-bottom: 0.25rem;">Phone</h4>
+                                    <h4 style="font-weight: 600; margin-bottom: 0.25rem;color: rgb(58, 159, 214);">Phone</h4>
                                     <p style="color: var(--muted-foreground); margin: 0;">
                                         7025487147
                                     </p>
@@ -1439,24 +1461,24 @@
                 <div class="animate-slide-in-right">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Send a Message</h3>
+                            <h3 class="card-title" style="color:  rgb(58, 159, 214);">Send a Message</h3>
                         </div>
                         <div class="card-content">
                             <form id="contactForm" onsubmit="handleSubmit(event)">
                                 <div class="form-group">
-                                    <label for="name" class="form-label">Name</label>
+                                    <label for="name" class="form-label" style="color: rgb(235, 239, 242);">Name</label>
                                     <input type="text" id="name" name="name" class="form-input" 
                                            placeholder="Your full name" required>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="email" class="form-label">Email</label>
+                                    <label for="email" class="form-label"style="color: rgb(235, 239, 242);">Email</label>
                                     <input type="email" id="email" name="email" class="form-input" 
                                            placeholder="your.email@example.com" required>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="message" class="form-label">Message</label>
+                                    <label for="message" class="form-label"style="color: rgb(235, 239, 242);">Message</label>
                                     <textarea id="message" name="message" class="form-textarea" 
                                               placeholder="Tell me about your project or idea..." 
                                               rows="6" required></textarea>
@@ -1528,6 +1550,22 @@
     </div>
 
     <script>
+        
+(function () {
+  const IMG = "WhatsApp Image 2025-08-13 at 22.11.31.jpeg"; // exact name
+  document.documentElement.style.height = "100%";
+  document.body.style.height = "100%";
+  Object.assign(document.body.style, {
+    margin: "0",
+    backgroundImage: url('${IMG}'),
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed"
+  });
+})();
+
+
         // Initialize Lucide icons
         lucide.createIcons();
 
@@ -1611,48 +1649,4 @@
             toast.classList.add('show');
             
             setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
-        }
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe all animated elements
-        document.addEventListener('DOMContentLoaded', function() {
-            const animatedElements = document.querySelectorAll('.animate-fade-in, .animate-slide-in-left, .animate-slide-in-right');
-            animatedElements.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-                observer.observe(el);
-            });
-
-            // Re-initialize Lucide icons after DOM content is loaded
-            lucide.createIcons();
-        });
-
-        // Handle window resize
-        window.addEventListener('resize', function() {
-            if (window.innerWidth >= 768 && isNavOpen) {
-                isNavOpen = false;
-                navMenu.classList.remove('active');
-                menuIcon.classList.remove('hidden');
-                closeIcon.classList.add('hidden');
-            }
-        });
-    </script>
-</body>
-</html>
+                toast.classList.remov
